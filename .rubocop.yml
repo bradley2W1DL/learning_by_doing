@@ -4,3 +4,5 @@ AllCops:
     - "Gemfile"
     - "homework_tester/**/*"
 
+Style/LineLength: 
+  Max: 100
