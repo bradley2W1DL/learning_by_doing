@@ -8,7 +8,9 @@ class CashRegister
     @total = 0.00
   end
 
-  attr_reader :total # allows .total to be called without defining a trivial method
+  def total
+    @total.round(2)
+  end
 
   def purchase(amount)
     # Make a purchase -- adds to total until pay is called
@@ -31,5 +33,8 @@ register = CashRegister.new
 puts register.total
 register.purchase(3.78)
 puts register.total
+register.purchase(8.45)
+puts register.total
 register.pay(5.00)
 puts register.total
+register.pay(10)
